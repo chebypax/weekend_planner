@@ -1,11 +1,13 @@
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabasePublishableKey =
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 export const hasSupabaseEnv =
   typeof supabaseUrl === "string" &&
   supabaseUrl.length > 0 &&
-  typeof supabaseAnonKey === "string" &&
-  supabaseAnonKey.length > 0;
+  typeof supabasePublishableKey === "string" &&
+  supabasePublishableKey.length > 0;
 
 export function getSupabaseSetupState() {
   if (hasSupabaseEnv) {
@@ -30,6 +32,6 @@ export function getSupabaseBrowserEnv() {
 
   return {
     url: supabaseUrl!,
-    anonKey: supabaseAnonKey!,
+    publishableKey: supabasePublishableKey!,
   };
 }

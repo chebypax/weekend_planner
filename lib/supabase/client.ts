@@ -13,6 +13,6 @@ export function getSupabaseBrowserClient() {
     return null;
   }
 
-  browserClient ??= createBrowserClient(env.url, env.anonKey);
+  browserClient ??= createBrowserClient(env.url, env.publishableKey);
   return browserClient;
 }

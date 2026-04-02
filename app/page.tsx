@@ -20,20 +20,6 @@ export default function Home() {
     <Box minH="100vh" py={{ base: "12", md: "20" }}>
       <Container maxW="6xl">
         <Stack gap="10">
-          <Box
-            rounded="full"
-            borderWidth="1px"
-            borderColor="orange.200"
-            bg="orange.50"
-            px="5"
-            py="3"
-            alignSelf="flex-start"
-          >
-            <Text fontWeight="700" fontStyle="italic" color="orange.900">
-              🤪 It is a last check before we start
-            </Text>
-          </Box>
-
           <Stack gap="6" maxW="3xl">
             <Badge
               alignSelf="flex-start"
@@ -145,7 +131,7 @@ export default function Home() {
                 fontSize="sm"
               >
                 <Text>NEXT_PUBLIC_SUPABASE_URL=...</Text>
-                <Text>NEXT_PUBLIC_SUPABASE_ANON_KEY=...</Text>
+                <Text>NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...</Text>
               </Stack>
             </Stack>
           </Box>
