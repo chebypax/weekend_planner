@@ -1,5 +1,9 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# Agent Instructions
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+- Use the existing stack in this repository: Next.js App Router, TypeScript, Chakra UI, Lucide, and Supabase.
+- The app must keep running even when Supabase environment variables are missing. Do not introduce code that crashes on startup when `NEXT_PUBLIC_SUPABASE_URL` or `NEXT_PUBLIC_SUPABASE_ANON_KEY` are absent.
+- At the end of every implementation task, explicitly tell the user whether they need to run any follow-up commands.
+- If a restart is needed, say so plainly and provide the exact command, for example: `npm run dev`.
+- If database updates are needed, say so plainly and provide the exact command or commands to run.
+- If any other manual step is required, provide the exact command sequence in the final message.
+- If no manual action is required, state that clearly.
