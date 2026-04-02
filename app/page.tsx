@@ -1,7 +1,6 @@
 import {
   Badge,
   Box,
-  Button,
   Code,
   Container,
   Flex,
@@ -21,6 +20,20 @@ export default function Home() {
     <Box minH="100vh" py={{ base: "12", md: "20" }}>
       <Container maxW="6xl">
         <Stack gap="10">
+          <Box
+            rounded="full"
+            borderWidth="1px"
+            borderColor="orange.200"
+            bg="orange.50"
+            px="5"
+            py="3"
+            alignSelf="flex-start"
+          >
+            <Text fontWeight="700" fontStyle="italic" color="orange.900">
+              🤪 It is a last check before we start
+            </Text>
+          </Box>
+
           <Stack gap="6" maxW="3xl">
             <Badge
               alignSelf="flex-start"
@@ -47,23 +60,40 @@ export default function Home() {
               without crashing before database env vars exist.
             </Text>
             <Flex gap="4" wrap="wrap">
-              <Button
-                asChild
-                size="lg"
+              <Link
+                href="https://vercel.com/new"
+                target="_blank"
+                display="inline-flex"
+                alignItems="center"
+                gap="2"
+                px="5"
+                py="3"
+                rounded="xl"
                 bg="gray.900"
                 color="white"
+                fontWeight="600"
                 _hover={{ bg: "gray.700" }}
               >
-                <Link href="https://vercel.com/new" target="_blank">
-                  Deploy on Vercel
-                  <ArrowRight size={18} />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="https://nextjs.org/docs" target="_blank">
-                  Read the docs
-                </Link>
-              </Button>
+                Deploy on Vercel
+                <ArrowRight size={18} />
+              </Link>
+              <Link
+                href="https://nextjs.org/docs"
+                target="_blank"
+                display="inline-flex"
+                alignItems="center"
+                px="5"
+                py="3"
+                rounded="xl"
+                borderWidth="1px"
+                borderColor="blackAlpha.200"
+                bg="whiteAlpha.700"
+                color="gray.900"
+                fontWeight="600"
+                _hover={{ bg: "whiteAlpha.900" }}
+              >
+                Read the docs
+              </Link>
             </Flex>
           </Stack>
 
