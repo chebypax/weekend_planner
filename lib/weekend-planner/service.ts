@@ -184,7 +184,7 @@ export async function generateWeekendRecommendations(input: {
     })),
   });
 
-  revalidateTag(RECOMMENDATION_HISTORY_CACHE_TAG);
+  revalidateTag(RECOMMENDATION_HISTORY_CACHE_TAG, "max");
 
   return {
     runId,
