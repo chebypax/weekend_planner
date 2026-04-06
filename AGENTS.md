@@ -9,3 +9,6 @@
 - If database updates are needed, say so plainly and provide the exact command or commands to run.
 - If any other manual step is required, provide the exact command sequence in the final message.
 - If no manual action is required, state that clearly.
+- In any UI where day tabs like Saturday/Sunday are shown, keep visible spacing between tab buttons (for example, a `gap` on the tabs list) so labels do not appear visually merged.
+- For newly added UI buttons, apply comfortable padding by default (for example, explicit `px` and `py`) unless the design requires a compact icon-only control.
+- For caching, use a default TTL of 1 hour unless the user explicitly requests a different TTL.
